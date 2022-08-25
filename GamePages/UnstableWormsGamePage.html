@@ -83,7 +83,7 @@
 						<section>
 							<ul class="actions controlButtons">
 								<li><a href="https://github.com/Jamiegar/UnstableWorms" target="_blank" class="button">Source Code</a></li>
-								<li><a href=# target="_blank" class="button">Play</a></li>
+								<li><a href="https://1drv.ms/u/s!AnLVJD_d5npyjbEMJhFl5fY-af6w2Q?e=ebHcrY" target="_blank" class="button">Play</a></li>
 								<li><a href="https://staffsuniversity-my.sharepoint.com/:w:/g/personal/l011591i_student_staffs_ac_uk/
 									EQwIRqPsG4pFrk3YsJ9YBsEBYI74X1_c8FJ0po0kmkM0Wg?e=6KLP11" target="_blank" class="button">Technical Design Document</a></li>
 							</ul>
@@ -121,13 +121,17 @@
 					<div class="container">
 						<header>
 							<h1 class="PageTitle">Mechanics and Systems</h1>
+							<h4 class="PageDesc">
+								Below is an outline of some of the mechanics and systems that I created for this project, 
+								more detail of each mechanic can be found in the Technical Design Document.
+							</h4>
 						</header>
 
 						<!-- Turn Mechanics -->
 						<Section>
 							<div class="row aln-center">
 								<div class="col-4 col-6-medium col-12-small">
-									<video controls autoplay muted loop class="image featured">
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
 										<source src="/videos/UnstableWormsPlaythroughMechanics.mp4">
 									</video>
 								</div>
@@ -174,7 +178,7 @@
 							<div class="row aln-center">
 								<div class="col-4 col-6-medium col-12-small">
 									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
-										<source src=#>
+										<source src="/videos/Unstable_Worms_Weapons_Showcase.mp4">
 									</video>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
@@ -182,8 +186,27 @@
 										<div class="MechanicDesc">
 											<h2>Weapon System</h2>
 											<p>
-												Des
+												At the start of each turn the player can look within the inventory and check which weapons are 
+												available to use, by default the “Grenade” is unlimited so the player can always use a “Grenade” 
+												if they have no other weapons. Other weapons can be obtained by collecting the weapon's crates that
+												spawn at the end of each turn. 
 											</p>
+											<ul>
+												<li>Aiming- 
+													<p>
+														When a weapon is selected and the aim input button is pressed, an aiming reticule is shown.
+														The reticule orbits the charcter in a way so the player can aim 360 degrees around the character.
+													</p>
+												</li>
+												<li>Charge- 
+													<p>
+														The charge will determine how far the projectile is thrown or fired, this can be seen by the 
+														bar above the charcters head. To charge the weapons the fire input must be held to charge and 
+														once ready the same input is released. This will launch the projectile in the aimed direction 
+														with the amount of power depented by the charge.
+													</p>
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -195,7 +218,7 @@
 							<div class="row aln-center">
 								<div class="col-4 col-6-medium col-12-small">
 									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
-										<source src=#>
+										<source src="/videos/Unstable_Worms_Map_Showcase.mp4">
 									</video>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
@@ -203,8 +226,27 @@
 										<div class="MechanicDesc">
 											<h2>Map System</h2>
 											<p>
-												Des
+												The map is made from cubes that are spawned in during the initalisation of the map. The placement of
+												these cubes is down to the pseudo random values that can be generated from a noise map.
 											</p>
+											<ul>
+												<li>Procedual Maps-
+													<p>
+														To produce a procedually genrated map the map manager on initalisation will firstly 
+														create a noise map using Perlin Noise to get pseudo random values which can then be used to place
+														a block in a space or not. 
+													</p>
+												</li>
+												<li>Destructible Terrain- 
+													<p>
+														As the terrain is made from individual cubes whenever a weapon or explosion hits the trrain a 
+														distructive radius can be formed and any block within that radius can be destroyed. Ideally 
+														the map would be genrated using a voxel system that would be much more efficent and produce 
+														less blocky terrain. However, given the time and experance I had at the time this was the best 
+														solution I had. 
+													</p>
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>

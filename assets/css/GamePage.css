@@ -58,9 +58,17 @@
 .PageTitle {
     font-size: 3rem;
     color: #B52A63;
-    padding: 0 0 75px 0;
+    padding: 0 0 20px 0;
     text-align: center;
     line-height: normal;
+}
+
+.PageDesc {
+    text-align: center;
+    padding: 0 0 70px 0;
+    color: white;
+    font-size: large;
+    text-transform: none;
 }
 
 .MechanicDesc {
