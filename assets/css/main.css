@@ -1533,13 +1533,35 @@ input, select, textarea {
 			}
 
 /* Project Tags */
-.ProjectUses {
+.ProjectTitles {
 	padding-bottom: 20px;
 	display:flex;
-	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.ProjectUses {
+	justify-self: flex-start;
+	display:flex;
 }
 
 .ProjectUses > b {
+	font-size: 1.2rem;
+	border-radius: 15px;
+	width: auto;
+	height: auto;
+	padding: 5px 25px 5px 25px;
+	border-color: white;
+	background-color: white;
+	margin: 10px;
+	transition-duration: 50ms;
+}
+
+.ProjectRole {
+	justify-self: flex-end;
+	display: flex;
+}
+
+.ProjectRole > b {
 	font-size: 1.2rem;
 	border-radius: 15px;
 	width: auto;
