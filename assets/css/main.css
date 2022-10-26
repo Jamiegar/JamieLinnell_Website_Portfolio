@@ -1572,7 +1572,9 @@ input, select, textarea {
 	margin: 10px;
 	transition-duration: 50ms;
 }
-
+.KeyPoints > li {
+	text-align: start;
+}
 /* List */
 
 	ul {
