@@ -92,22 +92,32 @@
 			<!-- Banner -->
 				<section class="sectionSepTopBottom">
 					<div class="container">
+						<header>
+							<h1 class="PageTitle">Framework Trailer</h1>
+						</header>
 						<div class="row aln-center">
-							<div class="col-4 col-6-medium col-12-small">
-								<div class="image featured">
-									<img src="/images/pic01.jpg">
+							<div class="col-6 col-9-medium col-12-small">
+								<div>
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
+										<source src="/videos/HexTrailer.mp4">
+									</video>
 								</div>
 							</div>
 
 							<div class="col-4 col-6-medium col-12-small">
-								<div class="image featured">
-									<img src="/images/pic01.jpg">
+								<div class="MechanicDesc">
+									<p style="font-size: 22px;">
+										This trailer for the framework demonstrates a all of the main in feature in action which include; the hexagonal grid,
+										biomes, evenviromental structures, height varation, world wrap system, Perlin Worms river generation, weather system,
+										day / night cycle, framework UI to control all aspects of the procedual generation and systems. 
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>		
 				
+
 				<section class="SectionSepBottom">
 					<div class="container">
 						<header>
@@ -118,14 +128,18 @@
 						<Section>
 							<div class="row aln-center">
 								<div class="col-4 col-6-medium col-12-small">
-									<img src="/images/pic01.jpg" class="image featured">
+									<img src="/images/GameScreenShots/Hexx/HexagonalGrid.png" class="image featured">
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
 									<div class="col-4 col-6-medium col-12-small">
 										<div class="MechanicDesc">
-											<h2>System Title</h2>
+											<h2>Grid Generation</h2>
 											<p>
-												System Description
+												Ther grid generation is created through a Grid Manager, that when initalized will create a grid of chunks, each chunk is 
+												responsable for creating a specified amount of tiles. Once all the chunks have been collected this collectivly makes up 
+												the whole grided map. However, before the grid is generated, the Grid Manager createds two noise maps that use the settings
+												that can be inputed by the user. These noise maps allow for a pseudo-random pattern of float values between 0-1. The values
+												that are sampled from the perlin noise can be used to change and influence the type of tile that is placed.
 											</p>
 										</div>
 									</div>
@@ -137,20 +151,156 @@
 						<Section>
 							<div class="row aln-center">
 								<div class="col-4 col-6-medium col-12-small">
-									<img src="/images/pic01.jpg" class="image featured">
+									<div class="MechanicDesc">
+										<h2>Biomes</h2>
+										<p>
+											The world map uses biomes to differentiate between different climates, it gives the landscape a more interesting and realistic style. 
+											Within the framework biomes are a collection of different tiles. Each biome has a noise value that is used when a chunk is finding the 
+											biome a tile belongs to. It does this by getting the tiles grid coordinate and entering that into the noise map, which returns the 
+											noise value (float 0–1). The chunk then finds the biome that has the closest noise value to the number just gotten from the noise map. 
+											Once the correct biome has been found the chunk finds the type of tile from the list of tiles with the chosen biome. To get the correct 
+											tile the chunk uses the same method but instead of using the biome noise map uses a tile noise map. 
+										</p>
+									</div>
 								</div>
 								<div class="col-4 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Hexx/GeneratedBiomes.png" class="image featured">
+								</div>
+							</div>
+						</Section>
+
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Hexx/Structures.png" class="image featured">
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="col-4 col-6-medium col-12-small">
+										<div class="MechanicDesc">
+											<h2>Structures</h2>
+											<p>
+												Structures are chosen after a tile has been spawned, firstly tiles are testing to check if a structure can be 
+												spawned on them. Once a structure can be spawned on a tile, like how a tile is found using the noise value, the 
+												same applies to the structures, except they do not have their own noise map and share the same noise map as the 
+												tiles. The structure that has the closest noise value to the maps noise value is then returned. Once a structure 
+												is picked the structure decided if it should be place or not based on a percentage chance of being spawned. If the 
+												structure can be spawned, its then place onto the tile. There are two different types of structures within the 
+												framework, single structures and multi structures. However, they both inherit from the same base structure. This 
+												means then when the function to place them is called the structure itself will find if it needs to place only one
+												of itself in the centre of the tile or if it is a multi-structure it may need to place itself multiple times and 
+												maybe place different variations of itself.
+
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Section>
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
 									<div class="MechanicDesc">
-										<h2>System Title</h2>
+										<h2>River Generation</h2>
 										<p>
-											System Description
+											The River Manager is responsable for creating the rivers throughout the map, Firstly, it needs to get all the points 
+											on the map where rivers can begin and where rivers can end, these are referred to as the minima and maxima. The maxima 
+											relate to the starting points of rivers and the minima refers to the end points of rivers. The river manager will then 
+											loop through all the maxima points, for each iteration the manager checks the percentage chance of rivers being spawned 
+											if the randomly generated value is more than the percentage chance of a river spawning, then the river is not spawned, 
+											and the loop continues.  Once the randomly generated number is less than the percentage chance of a river spawning the 
+											closest, minima value two that maximum value is found, now we have a maxima value for the start off the river and a 
+											minima value for the end point of the river.Now a river can be created, and the minima and maxima points inputted to 
+											the river. The river itself is responsible for generating its path through the landscape, placing tiles adjacent to 
+											each other along the path and making sure each play style is aligned. Firstly, the river generates its path using 
+											Perlin Worms, this is like getting a random direction however there is more control as the user can change a weighting 
+											value that will determine how much the Perlin Worm influences the direction it goes. The next stage is to place the 
+											river tiles so that they follow the direction of the river.
+											 
 										</p>
+									</div>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Hexx/RiverGeneration.png" class="image featured">
+								</div>
+							</div>
+						</Section>
+						
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
+										<source src="/images/GameScreenShots/Hexx/WorldWrap.mp4">
+									</video>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="col-4 col-6-medium col-12-small">
+										<div class="MechanicDesc">
+											<h2>World Wrap</h2>
+											<p>
+												The world is separated into chunks so that the world wrap can function. The player has a chunk rendering component 
+												and grid transform on it. The grid transform component handles the grid and chunk position the player is on. 
+												The chunk rendering component subscribes to an event on the grid transform that is called each time the player 
+												moves to a different chunk coordinate. When this event is triggered the subscribed function in the chunk render 
+												is called, this function manages the positions of the chunks based off the players current chunk coordinate. 
+												The chunk renderer has a rendering distance which is the number of chunks that should be activated from the player.
+												For example, a render distance of three will render 3 chunks in each direction so the total number of chunks rendered 
+												would be 12 plus the chunk the player is currently on equalling 13 chunks loaded. Any other chunk that is not within the 
+												chunks render distance is deactivated, this will still exist in the world but will not be rendered.However, when 
+												the player reaches a chunk coordinate near the edges of the map, the chunk renderer will need to reposition some 
+												of the chunks. When moving a chunk, it either needs to move to the left or right side of the map the chunk then 
+												moves an entire maps length to the left or right. This is calculated by taking the grid X dimension 
+												(number of chunks in world) and multiplying it by the chunk tile dimension (number of tiles in chunk) multiplied 
+												again by the tile X dimension (The tiles X dimension). The resulting world position is then easy to work out as 
+												we use the same function to calculate the world position of the chunk as used at the initialisation stage. 
+												The only difference is this time the input grid coordinate will be different giving us the world position it 
+												should be at.  
+
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</Section>
 					</div>
 				</section>
+						
+				
+				<section class="SectionSepBottom">
+					<div class="container">
+						<header>
+							<h1 class="PageTitle">Project Reflection</h1>
+						</header>
+						
+						<Section>
+							<div class="row">
+								<div class="col-7 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Hexx/CatlikeCodingReflection.png" class="image featured">
+								</div>
+								<div class="col-5 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<p>
+											Later on in the development of my project I found an article by Catlike Coding. This article demonstrates a similar object
+											to my final year project. I then begun to investigate how Catlike Coding had implemented similar features to mine. 
+											This allowed me to reflex and review my own work, I found that each tile for the grid itself was acctually created in the
+											game engine rather than using static meshes for grid tiles like I had used. This allowed much more control when manipulating
+											the tiles for features such as generating rivers, the tiles also merge togehter insted of having sharp edges like my project.
+											In the image we can see how the tiles themselfs are generated and have diffrent height variation, colours / biomes, rivers cut through
+											the tiled landscape. As a result, I would have liked to have taken this approch to genrating the grid if I was to 
+											complete this project again.    
+										</p>
+									</div>
+								</div>
+							</div>
+						</Section>
+						
+					
+
+					</div>
+				</section>
+					
 		</div>
 
 		<!-- Scripts -->
