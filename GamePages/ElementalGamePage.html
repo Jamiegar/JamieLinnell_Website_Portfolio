@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portfolio | Jamie Linnell</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/all.css" />
+        <link rel="stylesheet" href="/assets/css/GamePage.css" />
+		
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="/index.html">Jamie Linnell</a></h1>
+							<h2>Gameplay Programmer</h2>
+							
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="/index.html"><span>Portfolio</span></a></li>
+									<li><a href="/about.html"><span>About</span></a></li>
+								</ul>
+							</nav>
+					</div>
+				</section>
+
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<!-- Title -->
+                        <header> 
+							<h2><strong>Game Title</strong></h2>
+						</header>
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Game information -->
+									<section class="GameInfo">
+                                        <!-- Project Title -->
+                                        <h1>Role: <p>Programmer & Design</p></h1>
+                                        <h1>Game Description: 
+											<p>
+												This project is a prototype for a boss fighting game where the player needs to choose between
+												elemental powers (fire, ice and earth). Each element has diffrent abilitys which can be used to help defeate the Boss.
+												The aim for the player is to survive the bosses attacks and ultimately deal enough damage that the boss is killed and 
+												defeated.  
+											</p></h1>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+                                <section class="GameInfo">
+                                    <h1>Year: <p>2022: Developed in 12 weeks</p></h1>
+                                    <h1>Genre: 
+										<ul>
+											<li>Boss Fighting Game</li>
+										</ul>
+									</h1>
+                                    <h1>Software: 
+										<ul>
+											<li>Unreal Engine 5</li>
+											<li>Rider IDE for C++</li>
+										</ul>
+									
+									</h1>  
+                                </section>
+
+							</div>
+							
+							
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Banner -->
+				<section class="sectionSepTopBottom">
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+								<iframe class="image featured" width="560" height="460" src="https://www.youtube.com/embed/qsUu4Y9vIF8" 
+								title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+								encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+
+							<div class="col-4 col-6-medium col-12-small">
+								<div class="MechanicDesc">
+									<p style="font-size: 22px;">
+										This video is a narrated playthrough of the game and demonstrates many of the features of the project. I give a naration 
+										of what is happening throughout the playthrough.   
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>		
+				
+				<section class="SectionSepBottom">
+					<div class="container">
+						<header>
+							<h1 class="PageTitle">Mechanics and Systems</h1>
+						</header>
+
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
+										<source src="/videos/Elemental/MovementSystem.mp4">
+									</video>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="col-4 col-6-medium col-12-small">
+										<div class="MechanicDesc">
+											<h2>Movement System</h2>
+											<p>
+												The movement in this project I wanted to experement with as I was reseaching movement from game such as Super Smash
+												Bros. As a result, I desinged that I wanted the movement to not have a set speed that the charcter moves at but will 
+												acctually accelrate towards a top speed over time giving snappy movment but with gradual changes in accelration 
+												towards diffrent directions. This had to be created within C++, I bugun by overriding the default character movement component
+												and adding my own custom one. The system works by sampling a curve at a time interval to get the current speed value. The time value
+												is gotten from how long th input key duration has been. This then sets the speed of the charcter. Therefore the charcters movement 
+												accelration and speed can be changed by ajusting the movement curve. A simplar theory was also applyed to the jump but insted of setting 
+												the speed of the character the upwards velocity was changed.   
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Section>
+
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<h2>Ability System</h2>
+										<p>
+											The ability system was created to reduce dependences and allow for changes to current ability and for new ability to be created easily. 
+											Each elemental weapon has two ability slots, so that they can be use by the player within the game. Each ability has the code and logic in 
+											its own actor component. This component is added to the weapon that has that ability during initalization. Any data from a weapon is housed within an 
+											Elemental data asset. This asset has information such as primary and secondary abilitys, VFX, animations fire rates, ect. Because the 
+											data assets contain which ability is used only the correct ability components are added. This means to create a new ability you would only need to make
+											an actor component that conatins the logic for that ability and add it to the data asset.     
+										</p>
+									</div>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
+										<source src="/videos/Elemental/Ability & Weapon Demonstration.mp4">
+									</video>
+								</div>
+							</div>
+						</Section>
+
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
+										<source src="/videos/Elemental/BossAbilityDemo.mp4">
+									</video>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="col-4 col-6-medium col-12-small">
+										<div class="MechanicDesc">
+											<h2>AI Boss</h2>
+											<p>
+												The boss as elemental abilitys just like the player weapons (Staffs) however they are diffrent so that the AI abilities
+												can deal with the way the AI decides to use an ability. However the AI abilities and players still inherit from the same
+												parent. The Boss as three abilities, one for each element (fire, ice, earth). Each of the bosses abilitys have been design in 
+												a way so that they have telegraphing. This means the player knows what is going to happen before it does. So each ability has 
+												a build up before using the ability. The boss AI will decide which elemental ability to use based of its health. Once in knows what 
+												ability to use it will then transition to the build up (before the attack) and then once the build up has finished, perform the attack.
+												After the attack the boss will check to see if the player is still within view, if not it will move towards the player to get them back in 
+												view. When the player is in view the boss will wait for a random duration between 1-5 seconds and repreate ther cycle. The final boss attacks
+												had polishing aspects added to it such as camera shake which made the boss attacks feel more powerful.       
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Section>
+					</div>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
