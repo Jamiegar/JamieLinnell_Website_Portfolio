@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portfolio | Jamie Linnell</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/all.css" />
+        <link rel="stylesheet" href="/assets/css/GamePage.css" />
+		
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="/index.html">Jamie Linnell</a></h1>
+							<h2>Gameplay Programmer</h2>
+							
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="/index.html"><span>Portfolio</span></a></li>
+									<li><a href="/about.html"><span>About</span></a></li>
+								</ul>
+							</nav>
+					</div>
+				</section>
+
+			<!-- Features -->
+				<section id="features">
+					<div class="container">
+						<!-- Title -->
+                        <header> 
+							<h2><strong>Craftable</strong></h2>
+						</header>
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+
+								<!-- Game information -->
+									<section class="GameInfo">
+                                        <!-- Project Title -->
+                                        <h1>Role: <p>Programmer & Design</p></h1>
+                                        <h1>Tool Description: <p>This tool was inspered by the game Minecraft and the crafting system within that game.
+											The tool was an implementation of the type of tools that I expect Mojang (Minecraft Developer) would have to facilitate
+											designers to create items and recipes for the crafting system quickly and effectivly. This ment all items and 
+											recipes created with the tool would automatically work with the inventoory and crafting system in place.  
+										</p></h1>
+									</section>
+
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+
+                                <section class="GameInfo">
+                                    <h1>Year: <p>2022 over 12 weeks</p></h1>
+                                    <h1>Genre: 
+										<ul>
+											<li>Toolset</li>
+										</ul>
+									</h1>
+                                    <h1>Software: 
+										<ul>
+											<li>Unreal Engine 4</li>
+											<li>Visual Studio</li>
+											<li>C++</li>
+										</ul>
+									
+									</h1>  
+                                </section>
+
+							</div>
+							
+							
+						</div>
+
+						<section>
+							<ul class="actions">
+								<li><a href="https://staffsuniversity-my.sharepoint.com/:w:/g/personal/l011591i_student_staffs_ac_uk/EUPQZFGmo0lIhiNWMmtv2WoBqTwio5Q25tLLtpCBdFL-LA?e=WzmIWb" 
+									target="_blank" class="button">Technical Documentation</a></li>
+							</ul>
+						</section>
+
+					</div>
+				</section>
+
+			<!-- Banner -->
+				<section class="sectionSepTopBottom">
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-6-medium col-12-small">
+								<div class="image featured">
+									<img src="/images/GameScreenShots/Craftable/ItemCreation.png">
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<h2>Item Creation Tool</h2>
+										<p>
+											The item creation tool is used to create items by putting in the necessary data into the input parameters of the tool.
+											Once the designer is happy with the inputed data, they can click create. This will create a data asset within the 
+											project content browser under the items folder. The data asset is then used by the item actor to turn the actyor into 
+											that item by only using the dat provided. A list of all the items can be seen on the left hand side of the tool. 
+											Each item can also be edited within the tool and this will change the data asset too. Once any item has been created,
+											edited or if not all required dat is inputed the Tool Output Log will inform the user that the item was created, edited 
+											or needs futher dat to be created.   
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-4 col-6-medium col-12-small">
+								<div class="image featured">
+									<img src="/images/GameScreenShots/Craftable/RecipeCreationToolResize.png">
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<h2>Recipe Creation Tool</h2>
+										<p>
+											The recipe creation tool is used to create recipes for the crafting system. It does this by displaying a crafting table 
+											much like the one the player will see when they interact with a crafting table. The displayed crafting table in the tool
+											can have items draged onto it from the list of items on the left. Once the designer has given the recipe a name, filled in
+											the crafting pattern of the item and populated the result item box, the recipe can be made by clicking the create button. 
+											similar to the item creation tool, recipes can be edited by click the recipes tab in the top left and clicking on the recipe.  
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>		
+				
+				<section class="SectionSepBottom">
+					<div class="container">
+						<header>
+							<h1 class="PageTitle">Mechanics and Systems</h1>
+						</header>
+
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Craftable/ItemCreationLogicFlow.png" class="image featured">
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<h2>Item Creation</h2>
+										<p>
+											The image on the left shows the logic flow of how the items are created when the designer has entered all the data 
+											into the item creation tool. On the create button clicked we first check that it is a valid item that has been inputed.
+											if it is not we log out an error to the designer. If it is valid we then create the item within the content folder, 
+											clear all of the inputed data in the tool, refresh the item list so the new created item will show and finally log
+											out to the desinger the item was created successfully. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</Section>
+						<!-- Mechanic -->
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<h2>Item Creation</h2>
+										<p>
+											The image on the right shows the way recipes are create using the tool. Simlar to how the items are created, this diagram
+											begins when the designer has clicked the create button. The recipe is check if it is valid by making sure the result is not 
+											empty and items are in the crafting table it's self and has a valid name. If the recipe is not valid it will display an 
+											error to the designer. However, if the recipe is valid the recipe is created using the information populated in the tool
+											and a debug log showing the recipe has been created is displayed to the designer.   
+										</p>
+									</div>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<img src="/images/GameScreenShots/Craftable/RecipeCreationTool.png" class="image featured">
+								</div>
+							</div>
+						</Section>
+					</div>
+				</section>
+
+				<section class="SectionSepBottom">
+					<div class="container">
+						<header>
+							<h1 class="PageTitle">Craftable Trailer & Demonstration</h1>
+						</header>
+						<Section>
+							<div class="row aln-center">
+								<div class="col-4 col-6-medium col-12-small">
+									<iframe width="800" height="460" src="https://www.youtube.com/embed/0UWhaw_DT2c" title="YouTube video player" frameborder="0" 
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+									</iframe>
+								</div>
+								<div class="col-3 col-6-medium col-12-small">
+									<div class="MechanicDesc">
+										<p>
+											The video shows a demonstration on how the tool works, revealing the way both items and recipes are created.
+											Once the items and recipes are created the trailer shows how the crafting and inventory system is then used from
+											a players point of view. This displays how the sytems are working together so that items and recipes can be created 
+											easily for this system.
+										</p>
+									</div>
+								</div>
+							</div>
+						</Section>
+					</div>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
