@@ -1,0 +1,137 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.Showreal {
+    position: relative;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.Showreal > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Showreal > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.ShowrealOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2f2f2fb5;
+    mix-blend-mode: overlay;
+}
+
+.Scroll {
+    z-index: 10;
+    font-size: 30px;
+    position: absolute;
+	bottom: 2.5em;
+    width: 99%; 
+}
+
+.Scroll a {
+    font-size: 30px;
+    color: white;
+    
+    animation-name: scaleDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.Scroll a:hover {
+    color: #B52A63;
+    text-decoration: none;
+
+    animation-name: scaleUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.Scroll a::after {
+    font-size: 30px;
+}
+
+.Anim-FadeIn {
+    opacity: 0%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ShowrealText {
+    position: relative;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5%;
+
+}
+
+.ShowrealText h1 {
+    font-size: 5em;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+}
+
+.ShowrealText h2 {
+    font-size: 2em;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes scaleUp {
+    from {font-size: 30px;}
+    to {font-size: 60px;}
+}
+
+@keyframes scaleDown {
+    from {font-size: 60px;}
+    to {font-size: 30px;}
+}

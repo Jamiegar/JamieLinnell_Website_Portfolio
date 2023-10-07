@@ -6,36 +6,68 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/all.css">
+		<link rel="stylesheet" href="assets/css/Showcase.css">
+		<link rel="stylesheet" href="assets/css/Loader.css">
 		
 	</head>
+
 	<body class="homepage is-preload">
+		
+		<div class="loader">
+			<div class="character">
+				<img class="character_spritesheet" src="/images/Loader/LinkSpriteSheet.png" alt="Character">
+			</div>
+		</div>
+		
 		<div id="page-wrapper">
-
 			<!-- Header -->
-				<section id="header">
-					<div class="container">
+			<section id="header">
+				<!-- Nav -->
+					<nav id="nav" class="Anim-FadeIn">
+						<ul>
+							<li>
+								<a href="#features"><span class="fa-solid fa-folder" style="padding-right: 5px;"></span>
+									<span>Portfolio</span></a>
+							</li>
+							<li>
+								<a href="#AboutMe"> <span class="fa-solid fa-user-large" style="padding-right: 5px;"></span>
+									<span>About</span></a>
+							</li>
+							<li>
+								<a href="/CV/Jamie Linnell CV.pdf" target="_blank"> <span class="fa-solid fa-file" style="padding-right: 5px;"></span>
+									<span> CV</span></a>
+							</li>
+						</ul>
+					</nav>
 
-						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Jamie Linnell</a></h1>
-							<h2></h2>
-							
+					<section class = "Showreal"> 
+						
+						<video src="/videos/PortfolioOptimize.mp4" muted loop autoplay></video>
+						
+						
+						<div class="ShowrealOverlay">
+						</div>
+						
+						<div class="ShowrealText">
+							<div class="Anim-FadeIn">
+								<h1>Jamie Linnell</h1>
+								<h2>Game Dev, Programmer</h2>
+							</div>
+						</div>
 
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="index.html"><span>Portfolio</span></a></li>
-									<li><a href="about.html"><span>About</span></a></li>
-								</ul>
-							</nav>
-							<header>
+						<section class="Scroll">
+							<div class="Anim-FadeIn">
+								<a href="#features"><span class="fa-solid fa-arrow-down-long"></span></a>
+							</div>
+						</section>
+					</section>
 
-								<h2 class="button"><a href="/CV/Jamie Linnell CV.pdf" target="_blank">CV Download</a></h2>
-							</header>
-					</div>
-				</section>
+				
+			</section>
+				
 
 			<!-- Features -->
-				<section id="features">
+				<section id="features" name="features">
 					<div class="container">
 						<header>
 							<h2><strong>Portfolio</strong></h2>
@@ -187,40 +219,6 @@
 
 									</section>
 							</div>
-					
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Elemental -->
-									<section>
-										<img class="image featured" src="/images/GameScreenShots/Elemental/ElementalThumbnail.png">
-
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>Unreal Engine 5</b>
-													<b>Blueprint</b>
-													<b>C++</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Elemental</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>The objective is to defeate the dangrous Elemental boss using one of the three elements (Fire, Earth, Ice)</li>
-											<li>The character was the main focus for this project, I developed a character movement system in C++ that allows the movement acceleration to be based on a curve</li>
-											<li>An ability system that reduces dependences and allows abilitys to be swaped, mofified and created easily using component base architecture</li>
-										</ul>
-
-										<div class="col-12">
-											<ul class="actions">
-												<li><a href="/GamePages/ElementalGamePage.html" class="button">Tell Me More</a></li>
-											</ul>
-										</div>
-
-									</section>
-
-							</div>
 
 							<div class="col-4 col-6-medium col-12-small">
 
@@ -259,220 +257,47 @@
 									</section>
 
 							</div>
-							<div class="col-4 col-6-medium col-12-small">
 
-								<!-- Unstable Worms -->
-									<section> 
-										<img class="image featured" src="/images/GameScreenShots/UnstableWorms/UnstableWormsThumbnail.png">
-
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>Unreal Engine 4</b>
-													<b>Blueprint</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Unstable Worms</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>Prototype based on the Team17 game Worms</li>
-											<li>Implements many of the features and mechanics found in Worms e.g. Inventory, Weapons, Turn System, AI and Procedural Map Generation</li>
-											<li>Detailed Technical Design Document where each mechanic has been described and the implmentation explained</li>
-										</ul>
-										<!-- Unstable Worms is a prototype base on the game Worms. The prototype implements many of the features 
-										and mechanics found in Worms such as inventory, weapons, turn system, AI and procedural map generation. 
-										Created with the project is a detailed Technical Design Document where each mechanic has been described  
-										and the implmentation explained.--> 
-										
-
-										<div class="col-12">
-											<ul class="actions">
-												<li><a href="GamePages/UnstableWormsGamePage.html" class="button">Tell Me More</a></li>
-											</ul>
-										</div>
-
-									</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Winning Run -->
-									<section> 
-										<img class="image featured" src="/images/GameScreenShots/WinningRun/WinningRunThumbnail.png">
-
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>Unreal Engine 5</b>
-													<b>Blueprint</b>
-													<b>C++</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Winning Run</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>The project is based on the orignal retro game Winning Run</li>
-											<li>The prototype has a sophisticated AI which is able to drive the cars around a track to compete against the player</li>
-											<li>The project implements design principles</li>
-										</ul>
-										
-
-										<!-- <div class="col-12">
-											<ul class="actions">
-												<li><a href="" class="button">Tell Me More</a></li>
-											</ul>
-										</div> -->
-
-									</section>
-
-							</div>
 		
-							<div class="col-4 col-6-medium col-12-small">
+							
+							
 
-								<!-- Graphical Framework -->
-									<section> 
-										<video controls autoplay muted loop style="pointer-events: none;" class="image featured">
-											<source src="/images/GameScreenShots/GraphicalPhysicsFramework/Graphical&PhysicsFrameworkThumbnail.mp4" type="video/mp4">
-										</video>
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>C++</b>
-													<b>DirectX 11</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Graphical & Physics Framework</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>A graphical and physics framework</li>
-											<li>Created using C++ and DirectX 11</li>
-											<li>Implement the basic fundamentals found in Game engines</li>
-										</ul>
-										
-										<!-- This is a graphical and physics framework that was created using c++ and DirectX 11 the framework was created to 
-										implement the very basic fundamentals that can be seen in most gamer engines.--> 
-										
-
-										<!-- <div class="col-12">
-											<ul class="actions">
-												<li><a href=# class="button">Tell Me More</a></li>
-											</ul>
-										</div> -->
-
-									</section>
-
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Celestial Viking Invasion -->
-									<section> 
-										<img class="image featured" src="/images/GameScreenShots/CelestialVikingInvasion/CelestialVikingInvasionThumbnail.png">
-
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>Unreal Engine 5</b>
-													<b>Blueprint</b>
-												</div>
-												<div class="ProjectRole">
-													<b>Lead-Tech</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Celestial Viking Invasion</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>This game was submited for the Wake-Up Games Jam in 2023. It was the winning entry</li>
-											<li>The time frame given was one week. My role was Lead Tech and I created many of the mechanics such as charcter, weapons and turrets</li>
-											<li>The players objective is to repel invading vikings who want to destroy your base. To do this the player uses weapons and turret defences</li>
-										</ul>
-										
-										
-
-										<!-- <div class="col-12">
-											<ul class="actions">
-												<li><a href=# class="button">Tell Me More</a></li>
-											</ul>
-										</div> -->
-
-									</section>
-
-							</div>
-
-							<div class="col-4 col-6-medium col-12-small">
-
-								<!-- Brawl of Bots -->
-									<section> 
-										<img class="image featured" src="/images/GameScreenShots/BrawlOfBots/BrawlBotsThumbnail.png">
-
-										<header>
-											<!-- Project Attrabutes -->
-											<div class="ProjectTitles">
-												<div class="ProjectUses">
-													<b>Unreal Engine 4</b>
-													<b>Blueprint</b>
-												</div>
-												<div class="ProjectRole">
-													<b>Lead-Tech</b>
-												</div>
-											</div>
-											<!-- Project Title -->
-											<h3>Brawl of Bots</h3>
-										</header>
-										<ul class="KeyPoints">
-											<li>Survive a small-scale arena with power-ups while being chased by your opponents</li>
-											<li>Overcome enemy sabotage attempts, environment hazards and traps within the level and be the last one standing to claim victory</li>
-											<li>This game was a colabrative project at university where I took a Lead Tech Role. I designed and implmented many of the systems within the game</li>
-										</ul>
-
-										<!-- You are tasked with surviving in a small-scale arena with power-ups while being chased by your opponents. 
-										You must overcome their sabotage attempts, environment hazards and traps within the level and be the last one standing to claim victory -->
-									
-										<!-- <div class="col-12">
-											<ul class="actions">
-												<li><a href=# class="button">Tell Me More</a></li>
-											</ul>
-										</div> -->
-
-									</section>
-
-							</div>
+							
 						</div>
 					</div>
 				</section>
 
 			<!-- Banner -->
-				<!-- <section id="banner">
+				<section id="banner">
 					<div class="container">
-						<div class="row">
-							<section>
-									<div class="col-6 col-12-small">
-										<ul class="icons">
-											<li class="icon brands fa-github">
-												<a href="#">@untitled</a>
-											</li>
-											<li class="icon brands fa-linkedin">
-												<a href="#">instagram.com/untitled</a>
-											</li>
-											<li class="icon brands fa-twitter">
-												<a href="#">dribbble.com/untitled</a>
-											</li>
-											<li class="icon brands fa-facebook-f">
-												<a href="#">facebook.com/untitled</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</section>
+						<header id="AboutMe" name="AboutMe">
+							<h2><strong>About Me</strong></h2>
+						</header>
+
+						<div class="row aln-center">
+
+							<div class="col-4 col-6-medium col-12-small">
+								<span class="image featured"><img src="images/Jamie_SkyDive.jpg" alt="" /></span>
+							</div>
+
+							<div class="col-4 col-6-medium col-12-small">
+								<p>	After achieving a first-class degree in Computer Games Design and Programming, 
+									I wanted in enhance and refine my skills. I decided complete a Master’s degree at 
+									Staffordshire University in 3D Games. Due to my passion for games, in addition to 
+									completing my university work I have participated in many Games Jams. My involvement in 
+									Games Jams as given me unique experience in collaboration skills and I have managed to be 
+									apart of a team who have won a jam and a Jamfuser that came 3rd overall.  
+								</p>
+								<p>
+									When I am not creating or playing games, I enjoy a wide variety of hobbies such as building and flying 
+									elite racing drones capable of speeds over 150 mph. These drones are flown using first person perspective goggles 
+									which give an incredible experience while flying. Having grown up in Devon nestled around Dartmoor, I enjoy 
+									hiking and camping. Twice I even partook in the Ten Tours challenge, walking and navigating 35 miles over Dartmoor 
+									in a day and a half. 
+								</p>
+							</div>
 						</div>
-					</div> -->
+					</div>
 			
 		</div>
 
@@ -483,6 +308,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/loader.js"></script>
 
 	</body>
 </html>
