@@ -2588,6 +2588,10 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.button span {
+				padding-right: 5%;
+			}
+
 		/* Actions */
 
 			ul.actions li {
